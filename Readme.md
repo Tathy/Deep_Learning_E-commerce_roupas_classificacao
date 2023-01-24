@@ -53,6 +53,27 @@
 
 * Tanto a quantidade de neurônios quanto as funções de ativação precisarão de uma exploração, um processo mais subjetivo do que exato.
 
+## Aumento no número de épocas
+
+* Épocas são os contatos que o modelo tem com o dataset no processo de aprendizagem, em que os ajustes de pesos das conexões são feitas entre os neurônios.
+
+* O tempo de execução tem um aumento linear, diretamente proporcional à execução com somento uma época.
+
+* No modelo do estudo, a perda foi diminuido gradativamente, mas mesmo sendo um dataset de estudo, o aumento de tempo necessário já foi considerável.
+
+# Avaliação e Testes
+
+#### Acurácia
+* A acurácia irá medir o quanto o modelo está acertando.
+* O ideal é que, à medida que o modelo é reestruturado, a perda diminua e a acurácia aumente.
+
+#### Predição
+* A Softmax, usada na camada de saída, retorna a probabilidade de uma entrada pertencer a cada categoria.
+* No primeiro item do dataset o retorno foi [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.99999994]. Ou seja, foi calculada uma probabilidade de quase 100% da imagem representar um item da última classe.
+	
+#### Teste
+* Próximo passo estudo
+
 ## Referências
 
 * Estudo desenvolvido acompanhando o curso [Deep Learning parte 1: Keras](https://cursos.alura.com.br/course/deep-learning-introducao-com-keras), da Alura.
