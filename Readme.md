@@ -21,7 +21,7 @@
 
 * Na Camada 2, de saída, foi definida quantidade de classes do dataset, totalmente conectada com a anterior.
 
-# Redução de perda
+# Redução de perda / Aumento de acurácia
 
 ## Normalização do dataset
 
@@ -53,6 +53,8 @@
 
 * Tanto a quantidade de neurônios quanto as funções de ativação precisarão de uma exploração, um processo mais subjetivo do que exato.
 
+* Dropout: inativa algumas ligações entre duas camadas, como se os neurônios estivessem inativos
+
 ## Aumento no número de épocas
 
 * Épocas são os contatos que o modelo tem com o dataset no processo de aprendizagem, em que os ajustes de pesos das conexões são feitas entre os neurônios.
@@ -61,18 +63,25 @@
 
 * No modelo do estudo, a perda foi diminuido gradativamente, mas mesmo sendo um dataset de estudo, o aumento de tempo necessário já foi considerável.
 
-# Avaliação e Testes
+# Validação e Testes
 
 #### Acurácia
 * A acurácia irá medir o quanto o modelo está acertando.
 * O ideal é que, à medida que o modelo é reestruturado, a perda diminua e a acurácia aumente.
 
-#### Predição
+#### Predição e Teste
 * A Softmax, usada na camada de saída, retorna a probabilidade de uma entrada pertencer a cada categoria.
 * No primeiro item do dataset o retorno foi [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.99999994]. Ou seja, foi calculada uma probabilidade de quase 100% da imagem representar um item da última classe.
+* O teste é feito anlisando-se a acurácia da predição sobre o conjunto de teste.
 	
-#### Teste
-* Próximo passo estudo
+#### Conjunto de Validação
+
+* A Validação foi feita com um modelo de 10 épocas, com 20% do conjunto de treino.
+* Os gráficos de acurácia e perda das etapas de treino e teste sugerem que o modelo sofreu Overfitting, ou seja, está tão especializado nos padrões das imagens de treinamento que não consegue interpretar novas imagens, do conjunto de validação.
+
+[gráficos]
+
+* Para evitar o oferfitting, pode-se manter a quantidade de épocas no intervalo em que os resultados estão mais estáveis. Onde a tendência da perda e da acurácia estão favoráveis no treino e os resultados na validação ainda estão próximos.
 
 ## Referências
 
