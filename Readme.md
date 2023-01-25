@@ -79,7 +79,9 @@
 * A Validação foi feita com um modelo de 10 épocas, com 20% do conjunto de treino.
 * Os gráficos de acurácia e perda das etapas de treino e teste sugerem que o modelo sofreu Overfitting, ou seja, está tão especializado nos padrões das imagens de treinamento que não consegue interpretar novas imagens, do conjunto de validação.
 
-[gráficos]
+<div align="center">
+  <img src="https://github.com/Tathy/Deep_Learning_E-commerce_roupas_classificacao/blob/main/imgs/overfitting.png?raw=true"/>
+</div>
 
 * Para evitar o oferfitting, pode-se manter a quantidade de épocas no intervalo em que os resultados estão mais estáveis. Onde a tendência da perda e da acurácia estão favoráveis no treino e os resultados na validação ainda estão próximos.
 
