@@ -88,5 +88,3 @@
 ## Referências
 
 * Estudo desenvolvido acompanhando o curso [Deep Learning parte 1: Keras](https://cursos.alura.com.br/course/deep-learning-introducao-com-keras), da Alura.
-
-:seedling:
